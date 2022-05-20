@@ -19,9 +19,9 @@ describe("Show User Profile", () => {
 
   it("should be able to show user profile", async () => {
     const user = await createUserUseCase.execute({
-      name: 'user profile',
-      email: 'user@profile.com',
-      password: '123123'
+      name: "user profile",
+      email: "user@profile.com",
+      password: "123123"
     });
     const user_id = <string>user.id;
 
@@ -33,6 +33,6 @@ describe("Show User Profile", () => {
 });
 
   it("should not be able to show a non-existent user profile", async () => {
-    await expect(showUserProfileUseCase.execute('non-existing-user'))
+    await expect(showUserProfileUseCase.execute("non-existing-user"))
       .rejects.toBeInstanceOf(ShowUserProfileError);
   });

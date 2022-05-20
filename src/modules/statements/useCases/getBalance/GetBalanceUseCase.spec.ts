@@ -50,7 +50,7 @@ describe("Get Balance", () => {
     expect(balance).toHaveProperty("statement");
   });
 
-  it("Should not be able to get the balance from a non-existent user account", async () => {
+  it("should not be able to get the balance from a non-existent user account", async () => {
     expect(async () => {
       const user_id = "unknown";
 

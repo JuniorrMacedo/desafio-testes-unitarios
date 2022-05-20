@@ -44,7 +44,7 @@ describe("Authenticate User", () => {
     }).rejects.toBeInstanceOf(IncorrectEmailOrPasswordError);
   });
 
-  it("Should not be able to authenticate an user with an incorrect password", async () =>{
+  it("should not be able to authenticate an user with an incorrect password", async () =>{
     expect(async () => {
       const user = await inMemoryUsersRepository.create({
         name: "user profile",
